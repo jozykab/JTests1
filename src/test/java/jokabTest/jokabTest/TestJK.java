@@ -31,7 +31,7 @@ public class TestJK {
 
     }
 
-    @Test(enabled=false)
+    @Test(enabled=true)
     public final void mobileAndroidAppInfoCongo() throws Exception {
         WebDriver driver;
         DesiredCapabilities capabilities = new DesiredCapabilities();
