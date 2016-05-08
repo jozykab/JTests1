@@ -1,0 +1,67 @@
+package jokabTest.jokabTest;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Scanner;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+public class ReadJsonObject {
+    @Test
+    public void aptTesting() throws Exception {
+        try {
+            URL url = new URL("http://maps.googleapis.com/maps/api/geocode/json?address=chicago&sensor=false&#8221");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setRequestProperty("Accept", "application/json");
+
+            if (conn.getResponseCode() != 200) {
+                Reporter.log(" HTTP error code : " + conn.getResponseCode());
+                throw new RuntimeException(" HTTP error code : " + conn.getResponseCode());
+            }
+
+            Scanner scan = new Scanner(url.openStream());
+            String entireResponse = new String();
+            while (scan.hasNext())
+                entireResponse += scan.nextLine();
+
+            Reporter.log("Response : " + entireResponse);
+
+            scan.close();
+
+            JSONObject obj = new JSONObject(entireResponse);
+            String responseCode = obj.getString("status");
+            Reporter.log("status : " + responseCode);
+
+            JSONArray arr = obj.getJSONArray("results");
+            for (int i = 0; i < arr.length(); i++) {
+                String placeid = arr.getJSONObject(i).getString("place_id");
+                Reporter.log("Place id : " + placeid);
+                String formatAddress = arr.getJSONObject(i).getString("formatted_address");
+                Reporter.log("Address : " + formatAddress);
+
+                // validating Address as per the requirement
+                if (formatAddress.equalsIgnoreCase("Chicago, IL, USA")) {
+                    Reporter.log("Address is as Expected");
+                } else {
+                    Reporter.log("Address is not as Expected");
+                }
+            }
+
+            conn.disconnect();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        }
+
+    }
+}
