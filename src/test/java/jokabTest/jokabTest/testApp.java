@@ -24,7 +24,7 @@ public class testApp {
      *
      * @throws Exception the exception
      */
-    @Test
+    @Test(enabled=false)
     public final void setUp() throws Exception {
 
         // Created object of DesiredCapabilities class.

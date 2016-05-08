@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="jokabTest.jokabTest.TestJK" duration-ms="22340" started-at="2016-05-07T03:55:12Z" finished-at="2016-05-07T03:55:35Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="22340" started-at="2016-05-07T03:55:12Z" finished-at="2016-05-07T03:55:35Z">
+      <class name="jokabTest.jokabTest.TestJK">
+        <test-method status="PASS" signature="simpleTest()[pri:0, instance:jokabTest.jokabTest.TestJK@7a0ac6e3]" name="simpleTest" duration-ms="22282" started-at="2016-05-06T20:55:12Z" finished-at="2016-05-06T20:55:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- simpleTest -->
+      </class> <!-- jokabTest.jokabTest.TestJK -->
+    </test> <!-- Command line test -->
+  </suite> <!-- jokabTest.jokabTest.TestJK -->
+</testng-results>

@@ -1,8 +1,16 @@
-<suite name="Suite One">
-	<test name="Test One">
+<suite name="Suite One - JK Tests">
+	<test name="Test A">
 		<classes>
 			<class name="jokabTest.jokabTest.TestJK" />
+		</classes>
+	</test>
+	<test name="Test B">
+		<classes>
 			<class name="jokabTest.jokabTest.ReadJsonObject" />
+		</classes>
+	</test>
+	<test name="Test C">
+		<classes>
 			<class name="jokabTest.jokabTest.testApp" />
 		</classes>
 	</test>

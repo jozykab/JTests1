@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite One]">
+  <test name="Test One(failed)">
+    <classes>
+      <class name="jokabTest.jokabTest.testApp">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- jokabTest.jokabTest.testApp -->
+      <class name="jokabTest.jokabTest.TestJK">
+        <methods>
+          <include name="mobileAndroidAppInfoCongo"/>
+        </methods>
+      </class> <!-- jokabTest.jokabTest.TestJK -->
+    </classes>
+  </test> <!-- Test One(failed) -->
+</suite> <!-- Failed suite [Suite One] -->
