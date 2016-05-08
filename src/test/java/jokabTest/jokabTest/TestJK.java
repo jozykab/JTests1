@@ -15,7 +15,7 @@ public class TestJK {
       driver.get("http://www.virtualconsultafrica.com/");
       String title = driver.getTitle();
       Reporter.log("Page Title is " + title);
-      Assert.assertEquals("Virtual Consult - Accueil", title);
+      Assert.assertEquals("Virtual Consult - Acceuil", title);
       driver.quit();
       
   }
