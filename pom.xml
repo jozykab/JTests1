@@ -31,6 +31,9 @@
     <artifactId>json</artifactId>
     <version>20151123</version>
 </dependency>
-    
+    <groupId>net.thucydides</groupId>
+    <artifactId>thucydides-core</artifactId>
+    <version>0.9.275</version>
   </dependencies>
+  
 </project>

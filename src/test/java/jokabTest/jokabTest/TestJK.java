@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Date;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -19,9 +20,12 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class TestJK {
+    Date date = new Date();
     @Test
     public void OpenVirtualConsult() {
-
+        Reporter.log("****************START*********************");
+        Reporter.log(date.toString());
+        Reporter.log("*************************************");
         WebDriver driver = new FirefoxDriver();
         driver.get("http://www.virtualconsultafrica.com/");
         String title = driver.getTitle();
@@ -33,6 +37,9 @@ public class TestJK {
 
     @Test(enabled=true)
     public final void mobileAndroidAppInfoCongo() throws Exception {
+        Reporter.log("****************START*********************");
+        Reporter.log(date.toString());
+        Reporter.log("*************************************");
         WebDriver driver;
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "Android Emulator");
@@ -51,6 +58,9 @@ public class TestJK {
 
     @Test
     public void apiTesting() throws Exception {
+        Reporter.log("****************START*********************");
+        Reporter.log(date.toString());
+        Reporter.log("*************************************");
         try {
             URL url = new URL("http://maps.googleapis.com/maps/api/geocode/json?address=chicago&sensor=false&#8221");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -103,6 +113,9 @@ public class TestJK {
     }
     @Test
     public final void appiumSauceLabsTest() throws Exception {
+        Reporter.log("****************START*********************");
+        Reporter.log(date.toString());
+        Reporter.log("*************************************");
         WebDriver driver;
      DesiredCapabilities caps = DesiredCapabilities.android();
         String url = "http://206467959:0facb6fd-5ad1-4b97-8fab-5f083e3761bc@ondemand.saucelabs.com:80/wd/hub";
