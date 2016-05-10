@@ -35,7 +35,7 @@ public class TestJK {
 
     }
 
-    @Test(enabled=true)
+    @Test(enabled=false)
     public final void mobileAndroidAppInfoCongo() throws Exception {
         Reporter.log("****************START*********************");
         Reporter.log(date.toString());
